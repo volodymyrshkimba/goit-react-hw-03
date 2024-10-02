@@ -36,12 +36,24 @@ function ContactForm({ getContact }) {
       validationSchema={contactSchema}
     >
       <Form className={css.form}>
-        <label htmlFor={userNameId}>Name</label>
-        <Field type="text" name="name" id={userNameId}></Field>
-        <ErrorMessage name="name" component="span" />
-        <label htmlFor={userTelId}>Number</label>
-        <Field type="tel" name="number" id={userTelId}></Field>
-        <ErrorMessage name="number" component="span" />
+        <div className={css.inputWrapper}>
+          <label htmlFor={userNameId}>Name</label>
+          <Field type="text" name="name" id={userNameId}></Field>
+          <ErrorMessage
+            className={css.errorMessage}
+            name="name"
+            component="span"
+          />
+        </div>
+        <div className={css.inputWrapper}>
+          <label htmlFor={userTelId}>Number</label>
+          <Field type="tel" name="number" id={userTelId}></Field>
+          <ErrorMessage
+            className={css.errorMessage}
+            name="number"
+            component="span"
+          />
+        </div>
         <button className={css.btn} type="submit">
           Add contact
         </button>

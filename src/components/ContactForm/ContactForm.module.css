@@ -1,6 +1,4 @@
 .form {
-  display: flex;
-  flex-direction: column;
   max-width: 300px;
   border: 1px solid black;
   padding: 10px;
@@ -9,10 +7,23 @@
 }
 
 .form input {
-  margin-bottom: 10px;
+  height: 25px;
 }
 
 .btn {
+  display: block;
   max-width: 120px;
   align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.errorMessage {
+  color: rgb(197, 90, 90);
 }
