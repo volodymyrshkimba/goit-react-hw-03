@@ -6,9 +6,10 @@ function SearchBox({ searchKey, setSearchKey }) {
   }
 
   return (
-    <div>
+    <div className={css.searchWrapper}>
       <p>Find contacts by name</p>
       <input
+        className={css.search}
         onChange={handleChange}
         value={searchKey}
         type="text"

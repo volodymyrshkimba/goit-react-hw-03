@@ -13,6 +13,7 @@
 .btn {
   display: block;
   max-width: 120px;
+  height: 30px;
   align-self: center;
   margin-left: auto;
   margin-right: auto;
