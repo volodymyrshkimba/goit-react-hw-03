@@ -27,26 +27,26 @@ function ContactForm({ getContact }) {
   }
 
   return (
-    <div>
-      <Formik
-        initialValues={{
-          name: "",
-          number: "",
-        }}
-        onSubmit={handleSubmit}
-        validationSchema={contactSchema}
-      >
-        <Form>
-          <label htmlFor={userNameId}>Name</label>
-          <Field type="text" name="name" id={userNameId}></Field>
-          <ErrorMessage name="name" component="span" />
-          <label htmlFor={userTelId}>Number</label>
-          <Field type="tel" name="number" id={userTelId}></Field>
-          <ErrorMessage name="number" component="span" />
-          <button type="submit">Add contact</button>
-        </Form>
-      </Formik>
-    </div>
+    <Formik
+      initialValues={{
+        name: "",
+        number: "",
+      }}
+      onSubmit={handleSubmit}
+      validationSchema={contactSchema}
+    >
+      <Form className={css.form}>
+        <label htmlFor={userNameId}>Name</label>
+        <Field type="text" name="name" id={userNameId}></Field>
+        <ErrorMessage name="name" component="span" />
+        <label htmlFor={userTelId}>Number</label>
+        <Field type="tel" name="number" id={userTelId}></Field>
+        <ErrorMessage name="number" component="span" />
+        <button className={css.btn} type="submit">
+          Add contact
+        </button>
+      </Form>
+    </Formik>
   );
 }
 

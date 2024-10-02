@@ -2,13 +2,13 @@ import Contact from "../Contact/Contact.jsx";
 
 import css from "./ContactList.module.css";
 
-function ContactList({ contacts }) {
+function ContactList({ contacts, deleteContact }) {
   return (
     <ul>
       {contacts.map((contact) => {
         return (
           <li key={contact.id}>
-            <Contact contact={contact} />
+            <Contact contact={contact} deleteContact={deleteContact} />
           </li>
         );
       })}
